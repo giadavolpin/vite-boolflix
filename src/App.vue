@@ -1,7 +1,7 @@
 <template>
-  <div>
-
-  </div>
+  <HeaderComponent />
+  <CardComponent />
+  <SerieComponent />
 </template>
 
 <script>
@@ -10,11 +10,17 @@ import CardComponent from './components/CardComponent.vue';
 import SerieComponent from './components/SerieComponent.vue';
 
 export default {
-  HeaderComponent,
-  CardComponent,
-  SerieComponent
+  components: {
+    HeaderComponent,
+    CardComponent,
+    SerieComponent
+  }
+
 }
+
+
 </script>
 <style lang="scss" scoped>
-
+@use './assets/variables.scss' as *;
+@use './assets/general.scss' as *;
 </style>
