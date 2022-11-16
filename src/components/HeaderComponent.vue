@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg bg-red">
+    <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Boolflix</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import 'bootstrap/scss/bootstrap';
+
 
 export default {
 

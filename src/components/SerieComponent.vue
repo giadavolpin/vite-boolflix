@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import 'bootstrap/scss/bootstrap';
 
 export default {
 
