@@ -1,8 +1,8 @@
 //FILM
 <template>
     <div class="cards d-flex justify-content-center align-content-center">
-        <div class="card">
-
+        <div class="card" v-for="charater in charaters">
+            <img :src="charaters.img" alt="" />
         </div>
         <div class="card">
 
@@ -20,13 +20,14 @@
 </template>
 
 <script>
+import axios from 'axios';
 
 export default {
-    name: 'CardComponent';
+    name: 'CardComponent',
     data() {
         return {
             apiURL: 'https://api.themoviedb.org/3/movie/550?api_key=23e9105b1d7dc802906a747266351a62',
-            key: []
+            charaters: []
         }
     },
     methods: {
