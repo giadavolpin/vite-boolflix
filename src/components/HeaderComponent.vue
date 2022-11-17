@@ -26,7 +26,7 @@
 </template>
 
 <script>
-
+import variables from '../assets/variables.scss';
 
 export default {
     name: 'HeaderComponent',

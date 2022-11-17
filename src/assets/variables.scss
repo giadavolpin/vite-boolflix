@@ -1,9 +1,9 @@
-
-
-
-*{
+export * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+ul.nav {
+	list-style-type: none;
+}
