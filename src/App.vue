@@ -9,7 +9,7 @@ import HeaderComponent from './components/HeaderComponent.vue';
 import CardComponent from './components/CardComponent.vue';
 import SerieComponent from './components/SerieComponent.vue';
 import axios from 'axios';
-import store from './store';
+import { store } from './store';  //importo store.js
 
 export default {
   components: {
@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-
+      store,
     }
   },
   methods: {

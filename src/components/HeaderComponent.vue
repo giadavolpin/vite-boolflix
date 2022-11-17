@@ -1,7 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Boolflix</a>
+            <a class="navbar-brand" href="#">
+                <h1>Boolflix</h1>
+            </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -27,7 +29,8 @@
 
 
 export default {
-    name: 'HeaderComponent';
+    name: 'HeaderComponent',
+
 }
 </script>
 <style lang="scss" scoped>
