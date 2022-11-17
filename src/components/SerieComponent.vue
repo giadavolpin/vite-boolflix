@@ -13,7 +13,7 @@
 import CardComponent from './CardComponent.vue';
 
 export default {
-    name: "ItemList",
+    name: "serieComponent",
     components: {
         CardComponent
     },

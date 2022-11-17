@@ -14,7 +14,6 @@ import { store } from './store';  //importo store.js
 export default {
   components: {
     HeaderComponent,
-    CardComponent,
     SerieComponent
   },
   data() {

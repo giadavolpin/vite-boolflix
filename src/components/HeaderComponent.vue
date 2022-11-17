@@ -27,8 +27,11 @@
 
 <script>
 import variables from '../assets/variables.scss';
+import general from '../assets/general.scss';
 
 export default {
+    general,
+    variables,
     name: 'HeaderComponent',
 
 }
