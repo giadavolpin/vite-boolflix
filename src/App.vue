@@ -1,12 +1,11 @@
 <template>
   <HeaderComponent />
   <CardComponent />
-  <SerieComponent />
+  <SerieComponent :items="store.movie" />
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
-import CardComponent from './components/CardComponent.vue';
 import SerieComponent from './components/SerieComponent.vue';
 import axios from 'axios';
 import { store } from './store';  //importo store.js
@@ -21,18 +20,26 @@ export default {
       store,
     }
   },
-  methods: {
-    getMovie() {
-      const apiurl = store.baseUrl + store.endpoint;
-      const params = store.params
-      axios.get(apiurl, { params }).then((res) => {
-        console.log(res.data.results);
-      })
+  watch: {
+    'store.params.query'(newVal, oldVal) {
+      console.log(newVal)
+      console.log(oldVal)
+    },
+    methods: {
+      getMovie() {
+        const apiurl = store.baseUrl + store.endpoint;   //questi li trovi nello store.js
+        const params = store.params
+        axios.get(apiurl, { params }).then((res) => {
+          console.log(res.data.results);
+        })
+      }
+    },
+    created() {
+
     }
+
   }
-
 }
-
 
 </script>
 <style lang="scss" scoped>

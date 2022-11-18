@@ -1,10 +1,12 @@
 //FILM
 <template>
-    <div class="cards d-flex justify-content-center align-content-center">
-        <div class="card" v-for="charater in charaters">
-            <img :src="charaters.img" alt="" />
-        </div>
+    <div class="media text-center">
+        <h4>{{ item.original_title }}</h4>
+        <div>{{ item.title }}</div>
+        <div>{{ item.vote_average }}</div>
+        <div>{{ item.original_language }}</div>
     </div>
+
 </template>
 
 <script>
@@ -13,16 +15,8 @@ import axios from 'axios';
 export default {
     axios,
     name: 'CardComponent',
-    data() {
-        return {
-
-        }
-    },
-    methods: {
-
-    },
-    created() {
-
+    prop: {
+        item: object
     }
 
 }
