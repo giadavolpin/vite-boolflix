@@ -22,7 +22,7 @@ export default {
         return: {
             availableFlag: [
         'de', 'fr', 'it', 'es', 'en' ]
-}
+},
 })
 
 }
