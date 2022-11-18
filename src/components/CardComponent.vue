@@ -4,7 +4,7 @@
         <h4>{{ item.original_title }}</h4>
         <div>{{ item.title }}</div>
         <div>{{ item.vote_average }}</div>
-        <div v-if="availableFlag.includes()">
+        <div v-if="availableFlag.includes(item.original_language)">
             <img :src="'/image/' + item.original_language + '.png'" :alt="item.original_language + 'Flag'">
             <!-- dentro al src non ci vanno le graffe -->
         </div>
@@ -20,15 +20,14 @@ export default {
     axios,
     name: 'CardComponent',
     prop: {
-        item: object
+        item: Object
     },
-    data({
-        return: {
+    data() {
+        return {
             availableFlag: [
-        'de', 'fr', 'it', 'es', 'en' ]
-},
-})
-
+                'de', 'fr', 'it', 'es', 'en']
+        }
+    },
 }
 </script>
 

@@ -20,26 +20,27 @@ export default {
       store,
     }
   },
-  watch: {
+  watch: {    //come funziona il watch? 
     'store.params.query'(newVal, oldVal) {
       if (newVal !== oldVal) {
         this.getMovie();
       }
-    },
-    methods: {
-      getMovie() {
-        const apiurl = store.baseUrl + store.endpoint;   //questi li trovi nello store.js
-        const params = store.params;
-        axios.get(apiurl, { params }).then((res) => {
-          store.movie = res.data.results;
-        })
-      }
-    },
-    created() {
-
     }
+  },
+  methods: {
+    getMovie() {
+      const apiurl = store.baseUrl + store.endpoint;   //questi li trovi nello store.js
+      const params = store.params;
+      axios.get(apiurl, { params }).then((res) => {
+        store.movie = res.data.results;
+      })
+    }
+  },
+  created() {
 
   }
+
+
 }
 
 </script>
