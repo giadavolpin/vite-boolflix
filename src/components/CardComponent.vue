@@ -17,7 +17,13 @@ export default {
     name: 'CardComponent',
     prop: {
         item: object
-    }
+    },
+    data({
+        return: {
+            availableFlag: [
+        'de', 'fr', 'it', 'es', 'en' ]
+}
+})
 
 }
 </script>

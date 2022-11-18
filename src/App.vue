@@ -22,15 +22,16 @@ export default {
   },
   watch: {
     'store.params.query'(newVal, oldVal) {
-      console.log(newVal)
-      console.log(oldVal)
+      if (newVal !== oldVal) {
+        this.getMovie();
+      }
     },
     methods: {
       getMovie() {
         const apiurl = store.baseUrl + store.endpoint;   //questi li trovi nello store.js
-        const params = store.params
+        const params = store.params;
         axios.get(apiurl, { params }).then((res) => {
-          console.log(res.data.results);
+          store.movie = res.data.results;
         })
       }
     },
