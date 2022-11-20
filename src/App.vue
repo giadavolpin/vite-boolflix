@@ -20,16 +20,18 @@ export default {
       store,
     }
   },
-  watch: {    //come funziona il watch? 
-    'store.params.query'(newVal, oldVal) {
+  watch: {    //Tiene sotto osservazione delle cose e se cambiano lui lancia una nuova proprietà. 
+    'store.params.query'(newVal, oldVal) {    //se cambia qualcosa in store.params.query allora lancia la proprietà
       if (newVal !== oldVal) {
         this.getMovie();
+        console.log(newVal)
+        console.log(oldVal)
       }
     }
   },
   methods: {
     getMovie() {
-      const apiurl = store.baseUrl + store.endpoint;   //questi li trovi nello store.js
+      const apiurl = store.baseUrl + store.endPoint;   //questi li trovi nello store.js
       const params = store.params;
       axios.get(apiurl, { params }).then((res) => {
         store.movie = res.data.results;
